@@ -1,0 +1,506 @@
+/* reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, code, em, img, small, strong, sub, sup, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+a{
+	color:#06F;
+	text-decoration:none;
+}
+a:hover{
+	color:#D68B2E;
+	text-decoration:none;
+}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+}
+h1 {
+	color:#0066CC;
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+.red{color:#ff0000;}
+
+
+input, select, textarea{
+	background-color:transparent;
+	color:#1d1d1d;
+}
+
+[disabled='disabled']{
+	background-color:#FFF;
+}
+input:disabled{ /* keep IE radio and checkboxes from looking wrong */
+	background-color:transparent;
+}
+input[type=radio],input[type=checkbox]{ /* keep IE8 radio and checkboxes from looking wrong */
+	background-color:transparent;
+}
+
+input:focus,textarea:focus,select:focus {
+	background-color:#CCF;
+	outline: 0;
+}
+input[type=radio]:focus,input[type=checkbox]:focus{ /* keep IE radio and checkboxes from looking wrong */
+	background-color:transparent;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* html 5 */
+header, nav, section, footer, aside, article, figure, address{display:block; overflow:hidden;}
+
+/* main */
+html{
+}
+body{
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background:#CCC;
+	color: #BCBCBC;
+}
+header, nav, #torso, footer{
+	background:#DDD;
+	clear:both;
+	margin:0 auto;
+	overflow:hidden;
+	padding:10px 15px;
+	width:920px;
+}
+
+form button{
+	background-color:#CCF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border:1px solid black;
+	cursor:pointer;
+	padding:1px 15px;
+}
+
+form button:hover{
+	background-color:#999;
+}
+
+header{
+	background:#999;
+	color:#000;
+	overflow:visible;
+}
+
+/* header logo etc. */
+#companyLogo{ /* header logo IMG in admin layout */
+}
+h1#companyLogoAlt{ /* header logo alternate text if no IMG in admin layout (Site Name) */
+	color:#fff;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:2.5em;
+}
+aside#companyTagline{ /* header tagline */
+	font-style:italic;
+}
+aside.leftCol{
+	float:left;
+	width:125px;
+}
+nav{
+	background:#f1f1f1;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.3em;
+	height:13px;
+	line-height:14px;
+	margin:15px 0 0;
+	overflow:visible;
+	padding:10px 0px 10px 0px;
+	position:relative;
+	text-align:left;
+	width:915px;
+}
+.mainNav{
+	position:relative;
+	width:100%;
+}
+.mainNav li, .mainNav li ul li{
+	display:inline-block;
+	float:left;
+	font-family:tahoma;
+	font-size:1.1em;
+	margin:0 2px;
+	position:relative;
+}
+.mainNav li a,.mainNav li span,.mainNav li ul li a{
+	border-right:1px solid #0066CC;
+	color:#0066CC;
+	display:block;
+	padding:0 15px;
+}
+.mainNav li a.last{
+	border:none;
+}
+.mainNav li a.mainNavActive{
+	color:#D68B2E;
+	font-style:italic;
+	font-weight:bold;
+}
+.mainNav li a:hover{
+	color:#D68B2E;
+	text-decoration:none;
+}
+.mainNav li ul{
+	background:#0066CC;
+	left:-9999px;
+	position:absolute;
+	top:16px;
+	width:212px;
+	z-index:99999;
+}
+.mainNav li:hover ul{
+	left:auto;
+}
+.mainNav li ul li{
+	border-bottom:1px solid #fff;
+	margin: 5px auto 0;
+	padding: 0 0 5px;
+	width:100%;
+}
+.mainNav li ul li a{
+	color:#fff;
+	display:block;
+	padding:0px 15px;
+}
+.mainNav li ul li a:hover{
+	color:#D68B2E;
+}
+#torso{
+	padding-bottom:10px;
+	position:relative;
+}
+h1#pageTitle{ /* main content page header */
+	margin:0 0 18px 0;
+}
+/* REGIONS */
+div#regionType_1{ /* top banner region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	clear:both;
+	color:#333;
+	margin-bottom:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+}
+div#regionType_1 h2{ /* top banner region heading */
+	color:#333;
+}
+div#regionType_1 label{ /* top banner region labels */
+	display:block;
+	font-size:1.2em;
+	font-weight:800;
+	margin:15px 0 0 0;
+}
+div#regionType_2{ /* left col region */
+	background:#aaa;
+	border:1px solid #f1f1f1;
+	color:#333;
+	float:left;
+	font-size:1.15em;
+	margin-right:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+	width:150px;
+}
+div#regionType_2 h2{ /* left col region heading */
+	color:#FFF;
+	font-size:1.2em;
+}
+div#regionType_3{ /* right col region */
+	background:#aaa;
+	border:1px solid #f1f1f1;
+	color:#333;
+	float:right;
+	font-size:1.15em;
+	margin-left:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+	width:150px;
+}
+div#regionType_3 h2{ /* right col region heading */
+	color:#000;
+	font-size:1.2em;
+}
+div#regionType_4{ /* default region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	color:#333;
+	font-size:1.2em;
+	overflow:hidden;
+	padding:25px 10px 75px;
+	position:relative;
+}
+div#regionType_4 h2{ /* default region heading */
+	color:#666;
+}
+div#regionType_4 a{ /* default region heading */
+	color:#06F;
+}
+div#regionType_4 a:hover{ /* default region heading */
+	color:#000;
+}
+div#regionType_5{ /* bottom banner region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	clear:both;
+	color:#333;
+	margin-top:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+}
+div#regionType_5 h2{ /* bottom banner region heading */
+	color:#333;
+}
+/* END REGIONS */
+
+/* FORMS */
+#adminForm{ /* Admin Form */
+	margin:0 0 25px 0;
+}
+#adminForm li label{ /* hanles sub-labels as in radio and checkboxes */
+	display:block;
+}
+#adminForm li>label{ /* only first level labels */
+	font-size:1.2em;
+	font-weight:800;
+	margin:15px 0 0 0;
+}
+#adminForm li input[type=text]{
+	width:500px;
+}
+#adminForm li#submit_li{
+	margin:15px 0 0 0;
+}
+#adminForm li#submit_li button{
+	margin:0 15px 0 0;
+}
+.submitBtn{
+	margin:0 25px 0 0;
+}
+/* END FORMS */
+
+/* LISTS */
+.adminList{
+	border-bottom:1px solid #999;
+	margin:15px 0 0px 0;
+	width:100%;
+}
+.adminList th{
+	background-color:#ccc;
+	border-bottom:1px solid #999;
+	padding:4px 0 5px 0;
+}
+.adminList th.iconCol{
+	width:30px;
+}
+.adminList td{
+	padding:5px 0 5px 0;
+}
+.adminList tr.evenRow td{
+	background-color:#ddd;
+}
+.adminList thead tr th{ /*table for lists in admin */
+	text-align:left;
+}
+.addIcon,.importIcon{
+	background:#ddd url(/gbl_icons/silk/add.png) no-repeat 3px 50%;
+	border:1px solid #999;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:inline-block;
+	height:20px;
+	line-height:20px;
+	margin:10px 0;
+	padding:3px 10px 3px 25px;
+}
+.addIcon:hover,.importIcon:hover{
+	background-color:#ccc;
+	text-decoration:none;
+}
+.importIcon{
+	background:#ddd url(/gbl_icons/fugue-icons-3_4_3/icons/blue-document-excel.png) no-repeat 3px 50%;
+}
+.deleteIcon,.editIcon,.viewIcon,.questionIcon,.gradeIcon,.edit2Icon,.peopleIcon,.quizIcon,.copyIcon,.excludeIcon,.emailGoIcon,.positionIcon{
+	display:inline-block;
+	height:18px;
+	overflow:hidden;
+	vertical-align:middle;
+	width:30px;
+}
+.deleteIcon:hover,.editIcon:hover,.viewIcon:hover,.questionIcon:hover,.gradeIcon:hover,.edit2Icon:hover,
+.peopleIcon:hover,.quizIcon:hover,.copyIcon:hover,.excludeIcon:hover,.emailGoIcon:hover,.positionIcon:hover{
+	text-decoration:none;
+}
+.editIcon{
+	background:url(/gbl_icons/silk/pencil.png) no-repeat 50% 50%;
+}
+.edit2Icon{
+	background:url(/gbl_icons/silk/page_white_edit.png) no-repeat 50% 50%;
+}
+.viewIcon{
+	background:url(/gbl_icons/silk/magnifier.png) no-repeat 50% 50%;
+}
+.deleteIcon{
+	background:url(/gbl_icons/silk/cross.png) no-repeat 50% 50%;
+}
+.questionIcon{
+	background:url(/gbl_icons/silk/page_white_key.png) no-repeat 50% 50%;
+}
+.gradeIcon{
+	background:url(/gbl_icons/silk/page_white_medal.png) no-repeat 50% 50%;
+}
+.peopleIcon{
+	background:url(/gbl_icons/silk/group.png) no-repeat 50% 50%;
+}
+.excludeIcon{
+	background:url(/gbl_icons/silk/group_delete.png) no-repeat 50% 50%;
+}
+.emailGoIcon{
+	background:url(/gbl_icons/silk/email_go.png) no-repeat 50% 50%;
+}
+.positionIcon{
+	background:url(/gbl_icons/silk/shape_ungroup.png) no-repeat 50% 50%;
+}
+.quizIcon{
+	background:url(/gbl_icons/silk/application_form_edit.png) no-repeat 50% 50%;
+}
+.copyIcon{
+	background:url(/gbl_icons/silk/fugue-icons-3_4_3/icons/disks-black.png) no-repeat 50% 50%;
+}
+.deleteButton{ /* should be used in conjuction with .deleteIcon */
+	background-color:#F9F;
+	background-position:4px 50%;
+	height:22px;
+	line-height:20px;
+	padding:0px 0px 0px 9px;
+	vertical-align:top;
+	width:88px;
+}
+.recordcount{
+	font-size:87%;
+	font-style:italic;
+	padding:3px 0;
+	text-align:right;
+}
+/* END LISTS */
+
+/* FIELDSETS */
+.controllerAside fieldset{
+	border:1px solid #999;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin:8px 0;
+	padding:0 25px 25px;
+}
+.controllerAside fieldset legend{
+	font-size:1.2em;
+	font-weight:800;
+}
+fieldset #instructorList,fieldset #quizList{
+	list-style:square;
+	margin-left:15px;
+}
+/* END FIELDSETS */
+
+/* ADMIN HOME MENU */
+.adminHome{
+	border:1px solid #ccc;
+	margin:25px;
+	padding:10px;
+	width:135px;
+}
+.adminHome li{
+	margin:0 0 5px 0;
+}
+/* END ADMIN HOME MENU */
+
+#invalidAccoutNotice{
+	border:1px solid red;
+	float:right;
+	margin:50px 130px 0 0;
+	padding:25px;
+	width:450px;
+}
+
+label.checkBtn span, label.radioBtn span{
+	color:#0C0;
+}
+
+#importInstructions li{
+	list-style:circle;
+	margin-left:15px;
+}
+
+#helpTable{
+	margin:15px auto;
+	width:100%;
+}
+#helpTable tr{
+	border-bottom:1px solid #CCC;
+}
+#helpTable th{
+	padding:5px;
+	text-align:left;
+}
+#helpTable tbody tr:nth-child(odd){
+	background-color:#9CF;
+}
+#helpTable td{
+	padding:5px;
+}
+
+footer{
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:.95em;
+	font-weight:400;
+	text-align:center;
+}
+footer > div{
+	display:inline-block;
+	height:25px;
+	margin: 10px 10px;
+	min-width:300px;
+	padding:0 25px;
+	vertical-align:top;
+}
