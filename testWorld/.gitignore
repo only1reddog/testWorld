@@ -1,2 +1,5 @@
 /WEB-INF
 /archives
+/.project
+/*.html
+/.gitignore
