@@ -14,7 +14,7 @@
     <meta name="description" content="<cfoutput>#trim(variables.metadesc)#</cfoutput>" />
     <meta name="keywords" content="<cfoutput>#trim(variables.metakeywords)#</cfoutput>" />
     <meta name="robots" content="no index, no follow" />
-    <title><cfoutput>#trim(variables.metaTitle)#: World Test</cfoutput></title>
+    <title><cfoutput>#trim(variables.metaTitle)#: World Test wtf</cfoutput></title>
 
     <link rel="stylesheet" href="<cfoutput>#application.baseEPath#</cfoutput>/assets/css/default.css" />
 
