@@ -1,0 +1,1 @@
+<cfoutput>#variables.myPage#</cfoutput>

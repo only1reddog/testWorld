@@ -1,0 +1,4 @@
+"Severity","ThreadID","Date","Time","Application","Message"
+"ERROR","web-0","12/31/2012","18:57:37","org.hibernate.util.JDBCExceptionReporter","Table 'testWorld.STATICPAGES' doesn't exist"
+"ERROR","web-0","12/31/2012","18:59:10","org.hibernate.util.JDBCExceptionReporter","Table 'testWorld.STATICPAGES' doesn't exist"
+"ERROR","web-0","12/31/2012","19:02:24","org.hibernate.util.JDBCExceptionReporter","Table 'testWorld.STATICPAGES' doesn't exist"

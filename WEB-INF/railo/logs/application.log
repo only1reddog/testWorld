@@ -1,0 +1,5 @@
+"Severity","ThreadID","Date","Time","Application","Message"
+"ERROR","web-0","12/30/2012","21:11:40","","You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Bob',48)' at line 1"
+"ERROR","web-0","12/30/2012","21:12:08","","You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''Bob',48)' at line 1"
+"ERROR","web-0","12/31/2012","19:14:41","","Invalid Identifier."
+"ERROR","web-0","12/31/2012","19:26:48","","Wrong Context, tag cftry must have at least one tag cfcatch inside or a cffinally tag."
