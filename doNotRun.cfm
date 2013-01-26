@@ -42,7 +42,7 @@
 			entitySave(admin1);
 			ormFlush();
 		</cfscript>
-                        
+            
 		<!--- //// Layouts ////--->
 		<!--- create default layout (use init defaults)--->
 		<cfset commonLay = new com.Layouts() />
@@ -91,11 +91,15 @@
         <!--- create the pageLayout entity to use in page, Common is in most pages so we'll reuse this --->
         <cfset comLay = entityLoad("Layouts",{layoutName="Common"}, true) />
         <!--- create the region entities to use in page --->
-        <cfset homeRegion1 = new com.PageRegion(isActive=true,orderby=1,regionName='Welcome to the Test World.',regionText="<p>Holla y'all.</p>",regionType=defaultRegion)>
+        <cfset homeRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset homeRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset homeRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset homeRegion4 = new com.PageRegion(isActive=true,orderby=4,regionName='Welcome to the Test World.',regionText="<p>Holla y'all.</p>",regionType=defaultRegion)>
+        <cfset homeRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-		<cfset home = new com.StaticPages(pageName="Welcome",pageURL="index",parentURL="",linkText="Home",orderby=1,metaTitle="Welcome to the Test World",isActive=true,pageLayout=comLay) />
+		<cfset home = new com.StaticPages(pageName="Welcome",pageURL="index",parentURL="index",linkText="Home",orderby=1,metaTitle="Welcome to the Test World",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset home.setRegions([homeRegion1])>
+        <cfset home.setRegions([homeRegion1,homeRegion2,homeRegion3,homeRegion4,homeRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#home#" label="Home dump">--->
 		<!--- save it --->
@@ -104,11 +108,15 @@
 		<!--- //// Login page ////--->
         <!--- we want the Common layout so we'll just reuse the one we created for the Home page (see pageLayout=comLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset loginRegion4 = new com.PageRegion(isActive=true,orderby=1,regionName='',regionText='Please use the login form below to begin',regionType=defaultRegion)>
+        <cfset loginRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset loginRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset loginRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset loginRegion4 = new com.PageRegion(isActive=true,orderby=4,regionName='',regionText='Please use the login form below to begin',regionType=defaultRegion)>
+        <cfset loginRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset loginPage = new com.StaticPages(pageName="Login",pageURL="login",parentURL="",linkText="Login",orderby=997,metaTitle="Login",isActive=true,pageLayout=comLay) />
+        <cfset loginPage = new com.StaticPages(pageName="Login",pageURL="login",parentURL="admin",linkText="Login",orderby=2,metaTitle="Login",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset loginPage.setRegions([loginRegion4])>
+        <cfset loginPage.setRegions([loginRegion1,loginRegion2,loginRegion3,loginRegion4,loginRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#loginPage#" label="loginPage dump">--->
 		<!--- save it --->
@@ -117,11 +125,15 @@
 		<!--- //// Logout page ////--->
         <!--- we want the Common layout so we'll just reuse the one we created for the Home page (see pageLayout=comLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset logoutRegion4 = new com.PageRegion(isActive=true,orderby=1,regionName='Congratulations',regionText='You have been successfully logged out.',regionType=defaultRegion)>
+        <cfset logoutRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset logoutRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset logoutRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset logoutRegion4 = new com.PageRegion(isActive=true,orderby=4,regionName='Congratulations',regionText='You have been successfully logged out.',regionType=defaultRegion)>
+        <cfset logoutRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset logoutPage = new com.StaticPages(pageName="Logout",pageURL="logout",parentURL="",linkText="Logout",orderby=996,metaTitle="See you soon",isActive=true,pageLayout=comLay) />
+        <cfset logoutPage = new com.StaticPages(pageName="Logout",pageURL="logout",parentURL="admin",linkText="Logout",orderby=3,metaTitle="See you soon",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset logoutPage.setRegions([logoutRegion4])>
+        <cfset logoutPage.setRegions([logoutRegion1,logoutRegion2,logoutRegion3,logoutRegion4,logoutRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#logoutPage#" label="logoutPage dump">--->
 		<!--- save it --->
@@ -130,11 +142,15 @@
 		<!--- //// Security page ////--->
         <!--- we want the Common layout so we'll just reuse the one we created for the Home page (see pageLayout=comLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset securityRegion4 = new com.PageRegion(isActive=true,orderby=1,regionName='Warning!',regionText='You are attempting to enter a restricted area. If you feel you have reached this page in error, please contact your administrator.',regionType=defaultRegion)>
+        <cfset securityRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset securityRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset securityRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset securityRegion4 = new com.PageRegion(isActive=true,orderby=4,regionName='Warning!',regionText='You are attempting to enter a restricted area. If you feel you have reached this page in error, please contact your administrator.',regionType=defaultRegion)>
+        <cfset securityRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset securityPage = new com.StaticPages(pageName="Security Check",pageURL="security",parentURL="",linkText="Security Check",orderby=996,metaTitle="Warning - Security Check",isActive=true,pageLayout=comLay) />
+        <cfset securityPage = new com.StaticPages(pageName="Security Check",pageURL="security",parentURL="",linkText="Security Check",orderby=1,metaTitle="Warning - Security Check",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset securityPage.setRegions([securityRegion4])>
+        <cfset securityPage.setRegions([securityRegion1,securityRegion2,securityRegion3,securityRegion4,securityRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#securityPage#" label="securityPage dump">--->
 		<!--- save it --->
@@ -143,11 +159,15 @@
 		<!--- //// Admin default page ////--->
         <!--- we want the Admin layout so we'll just reuse the one we created above(adminLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset adminDefaultRegion1 = new com.PageRegion(isActive=true,orderby=1,regionText='',regionType=defaultRegion)>
+        <cfset adminDefaultRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset adminDefaultRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset adminDefaultRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset adminDefaultRegion4 = new com.PageRegion(isActive=true,orderby=4,regionText='',regionType=defaultRegion)>
+        <cfset adminDefaultRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
         <cfset adminHome = new com.StaticPages(pageName="Administration Center",pageURL="admin",parentURL="admin",linkText="Administration Center Home",orderby=1,metaTitle="Administration Center",isActive=true,pageLayout=adminLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset adminHome.setRegions([adminDefaultRegion1])>
+        <cfset adminHome.setRegions([adminDefaultRegion1,adminDefaultRegion2,adminDefaultRegion3,adminDefaultRegion4,adminDefaultRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#adminHome#" label="adminHome dump">--->
 		<!--- save it --->
@@ -156,11 +176,15 @@
 		<!--- //// Help default page ////--->
         <!--- we want the Admin layout so we'll just reuse the one we created above(adminLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset helpDefaultRegion1 = new com.PageRegion(isActive=true,orderby=1,regionName='',regionText='',regionType=defaultRegion)>
+        <cfset helpDefaultRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset helpDefaultRegion2 = new com.PageRegion(isActive=false,orderby=2,regionText='',regionType=leftColRegion,regionName="LEFT COL")>
+        <cfset helpDefaultRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset helpDefaultRegion4 = new com.PageRegion(isActive=true,orderby=4,regionName='',regionText='',regionType=defaultRegion)>
+        <cfset helpDefaultRegion5 = new com.PageRegion(isActive=false,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset adminHelp = new com.StaticPages(pageName="Helpful Information",pageURL="help",parentURL="admin",linkText="Help",orderby=998,metaTitle="Help",isActive=true,pageLayout=adminLay) />
+        <cfset adminHelp = new com.StaticPages(pageName="Helpful Information",pageURL="help",parentURL="",linkText="Help",orderby=4,metaTitle="Help",isActive=true,pageLayout=adminLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset adminHelp.setRegions([helpDefaultRegion1])>
+        <cfset adminHelp.setRegions([helpDefaultRegion1,helpDefaultRegion2,helpDefaultRegion3,helpDefaultRegion4,helpDefaultRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#adminHelp#" label="adminHelp dump">--->
 		<!--- save it --->
@@ -175,7 +199,7 @@
         <cfset exampleRegionsRegion4 = new com.PageRegion(isActive=true,regionText='This is the default content region.',regionType=defaultRegion,regionName="DEFAULT CONTENT REGION")>
         <cfset exampleRegionsRegion5 = new com.PageRegion(isActive=true,regionText='This is a bottom ad.',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset exampleRegionPage = new com.StaticPages(pageName="Regions Example",pageURL="region-example",parentURL="",linkText="Regions Ex:",orderby=995,metaTitle="Example Regions",isActive=true,pageLayout=comLay) />
+        <cfset exampleRegionPage = new com.StaticPages(pageName="Regions Example",pageURL="region-example",parentURL="index",linkText="Regions Ex:",orderby=2,metaTitle="Example Regions",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
         <cfset exampleRegionPage.setRegions([exampleRegionsRegion1,exampleRegionsRegion2,exampleRegionsRegion3,exampleRegionsRegion4,exampleRegionsRegion5])>
         <!--- dump to see it --->        
@@ -186,12 +210,15 @@
 		<!--- //// 404 page ////--->
         <!--- we want the Common layout so we'll just reuse the one we created for the Home page (see pageLayout=comLay below when we create this page)---> 
         <!--- create the region entities to use in page --->
-        <cfset pageNotFoundRegion1 = new com.PageRegion(isActive=true,orderby=2,regionText='You seem to have ended up on a page that no longer exists or never existed in the first place.',regionType=defaultRegion)>
-        <cfset pageNotFoundRegion2 = new com.PageRegion(regionTypeID=2,isActive=true,orderby=1,regionText='If you are having difficulty finding what you are looking for, contact your administrator or Application Services.',regionName='WARNING!!',regionType=leftColRegion)>
+        <cfset pageNotFoundRegion1 = new com.PageRegion(isActive=false,orderby=1,regionText='',regionType=topBannerRegion,regionName="TOP BANNER")>
+        <cfset pageNotFoundRegion2 = new com.PageRegion(isActive=true,orderby=2,regionText='If you are having difficulty finding what you are looking for, contact your administrator or Application Services.',regionTypeID=2,regionName='WARNING!!',regionType=leftColRegion)>
+        <cfset pageNotFoundRegion3 = new com.PageRegion(isActive=false,orderby=3,regionText='',regionType=rightColRegion,regionName="RIGHT COL")>
+        <cfset pageNotFoundRegion4 = new com.PageRegion(isActive=true,orderby=4,regionText='You seem to have ended up on a page that no longer exists or never existed in the first place.',regionType=defaultRegion)>
+        <cfset pageNotFoundRegion5 = new com.PageRegion(isActive=true,orderby=5,regionText='',regionType=bottomBannerRegion,regionName="BOTTOM BANNER")>
 		<!--- create the new page --->
-        <cfset pageNotFound = new com.StaticPages(pageName="Sorry, that pages doesn't seem to exist",pageURL="404",parentURL="",linkText="404",orderby=999,metaTitle="Oops!",isActive=true,pageLayout=comLay) />
+        <cfset pageNotFound = new com.StaticPages(pageName="Sorry, that pages doesn't seem to exist",pageURL="404",parentURL="",linkText="404",orderby=3,metaTitle="Oops!",isActive=true,pageLayout=comLay) />
 		<!--- add the regions from above to the new page --->
-        <cfset pageNotFound.setRegions([pageNotFoundRegion1, pageNotFoundRegion2])>
+        <cfset pageNotFound.setRegions([pageNotFoundRegion1,pageNotFoundRegion2,pageNotFoundRegion3,pageNotFoundRegion4,pageNotFoundRegion5])>
         <!--- dump to see it --->        
         <!---<cfdump var="#pageNotFound#" label="pageNotFound dump">--->
 		<!--- save it --->
@@ -243,7 +270,7 @@
 
     <h1>End DB Rebuild</h1>
     <cfcatch type="any">
-    	<cfdump var="#cfcatch#"><cfabort>
+    	<cfdump var="#cfcatch#">
     </cfcatch>
 </cftry>
     

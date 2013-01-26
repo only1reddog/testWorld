@@ -34,7 +34,9 @@
             </cfif>
         </cfoutput>
         <nav>
-			<cfinclude template="#application.baseEPath#/views/menus/mainNav.cfm">
+   			<!-- include js to create main nav -->
+			<script type="text/javascript" src="/assets/js/mainNav.js"></script>
+			<!---<cfinclude template="#application.baseEPath#/views/menus/mainNav.cfm">--->
         </nav>
     </header>
     <div id="torso">
@@ -42,29 +44,30 @@
     	<!--- <cfdump var="#params#"><cfabort> --->
         
 		<h1 id="pageTitle"><cfoutput>#params.getPageName()#</cfoutput></h1>
-        
         <cfif arrayLen(params.getRegions())>
         	<cfoutput>
             	<cfloop array="#params.getRegions()#" index="local.pageRegion">
-                	<div id="regionType_#local.pageRegion.getRegionType().getId()#">
-                        <cfif len(local.pageRegion.getRegionName())><h2>#local.pageRegion.getRegionName()#</h2></cfif>
-                        #local.pageRegion.getRegionText()#
-                        
-                        <!--- loop through controller content if exists --->
-                        <cfif isDefined('request.rc')>
-                            <cftry>
-                        	<cfloop array="#request.rc.controllerContent#" index="local.CC">
-								<cfset local.crID = isDefined('local.CC.regionID')? local.CC.regionID: 4>
-                                <cfif local.pageRegion.getRegionType().getId() eq local.crID>
-                                    <aside class="controllerAside" id="#local.CC.cssID#">
-                                       #local.CC.txt#
-                                    </aside>
-                                </cfif>
-                        	</cfloop>
-                            <cfcatch type="any"><cfdump var="#cfcatch#"></cfcatch>
-                            </cftry>
-                        </cfif>
-                    </div>
+					<cfif local.pageRegion.getIsActive()>
+	                	<div id="regionType_#local.pageRegion.getRegionType().getId()#">
+	                        <cfif len(local.pageRegion.getRegionName())><h2>#local.pageRegion.getRegionName()#</h2></cfif>
+	                        #local.pageRegion.getRegionText()#
+	                        
+	                        <!--- loop through controller content if exists --->
+	                        <cfif isDefined('request.rc')>
+	                            <cftry>
+	                        	<cfloop array="#request.rc.controllerContent#" index="local.CC">
+									<cfset local.crID = isDefined('local.CC.regionID')? local.CC.regionID: 4>
+	                                <cfif local.pageRegion.getRegionType().getId() eq local.crID>
+	                                    <aside class="controllerAside" id="#local.CC.cssID#">
+	                                       #local.CC.txt#
+	                                    </aside>
+	                                </cfif>
+	                        	</cfloop>
+	                            <cfcatch type="any"><cfdump var="#cfcatch#"></cfcatch>
+	                            </cftry>
+	                        </cfif>
+	                    </div>
+	            	</cfif>
                 </cfloop>
             </cfoutput>
         </cfif>
@@ -73,10 +76,6 @@
         <div>
         	<cfoutput>
                 &copy;#year(now())# - GH
-                <cfif session.userLoggedIn>
-                    &bull;
-                    Logged in as #trim(session.userRole)#: #trim(session.userObj.getFirstName())# #trim(session.userObj.getLastName())#
-                </cfif>
 			</cfoutput>
         </div>
     </footer>

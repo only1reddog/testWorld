@@ -1,6 +1,6 @@
 <cfcomponent displayname="Application" output="true" hint="Handle the application.">
 	<cfset THIS.Name = "worldTest" />
-	<cfset THIS.ApplicationTimeout = CreateTimeSpan( 0, 0, 20, 0 ) />
+	<cfset THIS.ApplicationTimeout = CreateTimeSpan( 1, 0, 0, 0 ) />
 	<cfset THIS.SessionManagement = true />
 	<cfset THIS.SetClientCookies = true />
 
@@ -24,9 +24,6 @@
 	<cffunction name="OnApplicationStart" access="public" returntype="boolean" output="false" hint="Fires when the application is first created.">
 	    <cfset application.dsn = THIS.datasource>
 	    <cfset application.baseEPath = ''>
-	    <!---read company info from xml --->
-	   	<cffile action="read" file="#expandPath('assets/xml/company.xml')#" variable="xmldoc"> 
-		<cfset application.company = XmlParse(xmldoc)> 
             
  		<cfreturn true />
 	</cffunction>
@@ -57,6 +54,7 @@
         <cfelse>
 			<cfset url.r1 = 'index'>
 		</cfif>
+        
 		<cftry>
 			<!--- get page info, pass it into the page below --->
             <cfif isDefined('url.r2') && lcase(url.r2) eq 'admin'>
@@ -68,7 +66,7 @@
             </cfif>
 			<cfif !structKeyExists(variables,'args')><!--- 404 if not found --->
                 <cfset variables.args = entityLoad("StaticPages",{pageURL='404'},true)>
-            </cfif>			
+            </cfif>
 
             <!--- if there is a controller call it; --->
             <cfif fileExists(expandPath('#application.baseEPath#/controllers/#url.r1#.cfc'))><!---controller cfc names MUST BE LOWER CASE on linux box--->
@@ -93,14 +91,13 @@
 	                <cfset variables.args.setMetaTitle(request.rc.metaTitle)>
                 </cfif>
             </cfif>
-			
-			<cfif structKeyExists(variables,'args')>
-	            <!--- create the page and pass in the page info from above--->
-	            <cfset variables.myPage = createObject('com.Page').init('#application.baseEPath#/layouts/#trim(lcase(variables.args.getPageLayout().getLayoutName()))#.cfm',variables.args)>
-	        </cfif>    
+
+            <!--- create the page and pass in the page info from above--->
+            <cfset variables.myPage = createObject('com.Page').init('#application.baseEPath#/layouts/#trim(lcase(variables.args.getPageLayout().getLayoutName()))#.cfm',variables.args)>
+            
 			<cfcatch type="any">
             	<!--- for debugging if this is uncommented you may get bogus errors (specially on db rebuild). use with caution--->
-				<cfdump var="#cfcatch#"><cfabort><!--- --->
+				<!---<cfdump var="#cfcatch#"><cfabort> --->
 
 				<!--- during site creation this is helpful to have, can prly remove on production. wouldn't hurt to keep either. --->
 				<cfset variables.myPage='Error in page creation. Line 102 Application.cfc'>

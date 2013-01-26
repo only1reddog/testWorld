@@ -357,7 +357,7 @@ div#regionType_5 h2{ /* bottom banner region heading */
 	text-decoration:none;
 }
 .importIcon{
-	background:#ddd url(/images/fugue-icons-3_4_3/icons/blue-document-excel.png) no-repeat 3px 50%;
+	background:#ddd url(/gbl_icons/silk/fugue-icons-3_4_3/icons/blue-document-excel.png) no-repeat 3px 50%;
 }
 .deleteIcon,.editIcon,.viewIcon,.questionIcon,.gradeIcon,.edit2Icon,.peopleIcon,.quizIcon,.copyIcon,.excludeIcon,.emailGoIcon,.positionIcon{
 	display:inline-block;
@@ -371,40 +371,40 @@ div#regionType_5 h2{ /* bottom banner region heading */
 	text-decoration:none;
 }
 .editIcon{
-	background:url(/images/silk_icons/pencil.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/pencil.png) no-repeat 50% 50%;
 }
 .edit2Icon{
-	background:url(/images/silk_icons/page_white_edit.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/page_white_edit.png) no-repeat 50% 50%;
 }
 .viewIcon{
-	background:url(/images/silk_icons/magnifier.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/magnifier.png) no-repeat 50% 50%;
 }
 .deleteIcon{
-	background:url(/images/silk_icons/cross.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/cross.png) no-repeat 50% 50%;
 }
 .questionIcon{
-	background:url(/images/silk_icons/page_white_key.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/page_white_key.png) no-repeat 50% 50%;
 }
 .gradeIcon{
-	background:url(/images/silk_icons/page_white_medal.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/page_white_medal.png) no-repeat 50% 50%;
 }
 .peopleIcon{
-	background:url(/images/silk_icons/group.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/group.png) no-repeat 50% 50%;
 }
 .excludeIcon{
-	background:url(/images/silk_icons/group_delete.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/group_delete.png) no-repeat 50% 50%;
 }
 .emailGoIcon{
-	background:url(/images/silk_icons/email_go.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/email_go.png) no-repeat 50% 50%;
 }
 .positionIcon{
-	background:url(/images/silk_icons/shape_ungroup.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/shape_ungroup.png) no-repeat 50% 50%;
 }
 .quizIcon{
-	background:url(/images/silk_icons/application_form_edit.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/application_form_edit.png) no-repeat 50% 50%;
 }
 .copyIcon{
-	background:url(/images/fugue-icons-3_4_3/icons/disks-black.png) no-repeat 50% 50%;
+	background:url(/gbl_icons/silk/fugue-icons-3_4_3/icons/disks-black.png) no-repeat 50% 50%;
 }
 .deleteButton{ /* should be used in conjuction with .deleteIcon */
 	background-color:#F9F;

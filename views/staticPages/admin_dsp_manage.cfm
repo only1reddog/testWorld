@@ -32,6 +32,24 @@
         #local.fbObj.makeSelect(fieldLabel='Layout',fieldName='layoutID',fieldSelectedValue=local.lSelectedID,fieldArray=local.layoutArray)#
         #local.fbObj.makeSelect(fieldLabel='Display Order',fieldName='orderby',fieldSelectedValue=local.oSelectedID,fieldArray=local.orderbyArray)#
         #local.fbObj.makeRadio(fieldLabel='Active',fieldName='isActive',fieldSelectedValue=local.obj.getIsActive(),fieldArray=local.ary)#
+			<cfscript>
+//				writedump(local.obj.getRegions()[1].getRegionType()); abort;
+				for(i=1; i LTE arrayLen(local.obj.getRegions()); i++){	
+					if(!local.obj.getRegions()[i].getIsDeleted()){
+						//local.obj.getRegions()[i].getIsActive() && 
+						if(!isNull(variables['Region#i#'].getRegionType())){
+							regType = variables['Region#i#'].getRegionType().getRegionTypeName();
+						}
+						else{
+							regType = 'Unused Region';
+						}
+						imActive = variables['Region#i#'].getIsActive();
+						writeOutput(local.fbObj.makeCheckbox(fieldLabel=regType,fieldName='region_#i#_box',fieldSelectedValue=imActive? "1": "0",fieldArray=local.regionAry));
+				        writeOutput(local.fbObj.makeText('#regType# Title','region_#isNumeric(local.obj.getRegions()[i].getID())? local.obj.getRegions()[i].getID(): "0"#_title','region_#i#_title',variables['Region#i#'].getRegionName(),'adminInput',255));
+						writeOutput(local.fbObj.makeTextarea('#regType# Content','region_#local.obj.getRegions()[i].getID()#_#local.obj.getRegions()[i].getOrderby()?local.obj.getRegions()[i].getOrderby():i#','region_#local.obj.getRegions()[i].getID()#','adminInput','#local.obj.getRegions()[i].getRegionText()#'));
+					}
+				}
+			</cfscript>
     <cfif val(local.obj.getID())>
     	#local.fbObj.endForm(hasCancel=true,cancelURL='#application.baseEPath#/?staticPages/admin',hasCustom=true,customText='Delete',customClass='deleteIcon deleteButton')#
 	<cfelse>

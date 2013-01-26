@@ -46,6 +46,7 @@
         <cfif arrayLen(params.getRegions())>
         	<cfoutput>
             	<cfloop array="#params.getRegions()#" index="local.pageRegion">
+					<cfif local.pageRegion.getIsActive()>
                 	<div id="regionType_#local.pageRegion.getRegionType().getId()#">
                         #local.pageRegion.getRegionText()#
                         
@@ -64,6 +65,7 @@
                             </cftry>
                         </cfif>
                     </div>
+					</cfif>
                 </cfloop>
             </cfoutput>
         </cfif>

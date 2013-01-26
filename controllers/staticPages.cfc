@@ -1,7 +1,7 @@
 component{
 	public any function init(rcF,rcU){
 	}
-	
+	 
 	public any function admin(rcU,rcF){
 		//get form and url vars
         local.rcForm=arguments.rcF;
@@ -102,6 +102,19 @@ component{
             /* Don't really delete an entity, mark is as isDeleted=1*/
             local.obj.setIsDeleted(true);
   
+			/*FILE INFO*/
+			theFile = '#local.obj.getPageURL()#.html';
+			sourceFile = expandPath('/#theFile#');
+			destinationFile = expandPath('/archives/#theFile#.#dateformat(now(),'yyyymmdd')##timeformat(now(),'hhmmss')#');
+			
+			/* BACKUP EXISTING */
+			if(fileExists(sourceFile)){
+				fileMove(sourceFile,destinationFile);
+			}
+
+			/*CREATE MAIN NAV JS FILE*/
+			js = new controllers.createMainNav(local.obj);	
+
   	        location("#application.baseEPath#/?staticPages/admin/&msg=#local.processMsg#",false);
         }
         catch(Any e){
@@ -114,35 +127,105 @@ component{
     private any function adminProcess(rcF){
     	local.rcF = arguments.rcF;
 
-    	if(local.rcF.id){
-            local.processMsg = 'Page updated successfully.';
-			local.obj = entityLoadByPK("StaticPages",local.rcF.id);
-        }
-        else{
-            local.processMsg = 'Page added successfully.';
-			local.obj = entityNew("StaticPages");
-       	}
+        local.processMsg = 'Page updated successfully.';
+		local.obj = entityLoadByPK("StaticPages",local.rcF.id);
+		/*array to hold regions*/
+		local. regions = arrayNew(1);
+		/*create 5 empty spots so we can put regions in correct order*/
+		arraySet(local.regions,1,5,"");
+
+		/*get regions*/
+		for(i=1; i LTE listLen(local.rcF.fieldnames); i++){
+			if(lcase(listFirst(listGetAt(local.rcF.fieldnames,i),'_')) eq 'region'){
+				thisField = listGetAt(local.rcF.fieldnames,i);
+				thisRegID  = listGetAt(listGetAt(local.rcF.fieldnames,i),2,'_');
+				thisOrderby = listLast(listGetAt(local.rcF.fieldnames,i),'_');
+				thisVal = form[thisField];
+
+				local.regObj = entityLoadByPK("PageRegion",thisRegID);
+				if(isNumeric(thisOrderby)){ // orderby
+					local.regObj.setOrderby(thisOrderby);
+					/*place region into correct order in array*/
+					local.regions[thisOrderby]=local.regObj;
+					local.regObj.setRegionText(thisVal);
+					if(isDefined('local.rcF["region_#thisOrderby#_box"]')){
+						local.regObj.setIsActive(1);
+					}
+					else{
+						local.regObj.setIsActive(0);
+					}
+				}
+				else{ // title
+					if(lcase(thisOrderBy) eq 'title'){
+						local.regObj.setRegionName(thisVal);
+					}
+				}
+			}
+		}		
+
+		/*add region array to page obj*/
+		local.obj.setRegions(local.regions);
+		
+		/*get layout*/
+		local.layoutObj = entityLoadByPK("Layouts",local.rcF.layoutid);
+		local.obj.setPageLayout(local.layoutObj);
+
+       	/*set page data*/
         local.obj.setMetaTitle(local.rcF.metaTitle);
         local.obj.setMetadesc(local.rcF.metadesc);
         local.obj.setMetakeywords(local.rcF.metakeywords);
         local.obj.setLinkText(local.rcF.linkText);
         local.obj.setPageName(local.rcF.pageName);
         local.obj.setPageURL(local.rcF.pageURL);
-        local.obj.setParentURL(local.rcF.parentURL);
+        local.obj.setParentURL(lcase(local.rcF.parentURL));
         local.obj.setIsActive(local.rcF.isActive);
-		
+
         try{
 	        entitySave(local.obj);
-	        //reorder entries based on form.orderby
+	        //reorder other entries
 	        reorder(local.obj.getParentURL(),local.obj.getOrderby(),local.rcF.orderby);
+
+			//set new orderby and save
 	        local.obj.setOrderby(local.rcF.orderby);
-       		
 	        entitySave(local.obj);
-	        location("#application.baseEPath#/?staticPages/admin/&msg=#local.processMsg#",false);
-        }
+	        ormFlush();
+        }        
         catch(Any e){
+			writedump(e); abort;
         	return false;
         }
+        
+        try{ /*if this is a front end page, create html file*/
+        //	if(lcase(local.rcF.parentURL) eq 'index'){
+				/* GET CONTROLLER */
+				/* this should work with sections. Just need to get controller somehow.
+				rcU = {};
+				request.rc = createObject('controllers.login').init(rcF,rcU)
+				*/
+				
+	        	/* CREATE THE PAGE*/
+	        	pageContent = createObject('com.Page').init('/layouts/#local.obj.getPageLayout().getLayoutName()#.cfm',local.obj);				
+					
+				/*FILE INFO*/
+				theFile = '#local.rcF.pageURL#.html';
+				sourceFile = expandPath('/#theFile#');
+				destinationFile = expandPath('/archives/#theFile#.#dateformat(now(),'yyyymmdd')##timeformat(now(),'hhmmss')#');
+			
+				/* BACKUP EXISTING */
+				if(fileExists(sourceFile)){
+					fileMove(sourceFile,destinationFile);
+				}
+
+				/*CREATE NEW HTML FILE*/
+				fileWrite(sourceFile,pageContent);        
+				
+				/*CREATE MAIN NAV JS FILE*/
+				js = new controllers.createMainNav(local.obj);	
+        //	}
+        }catch(Any e){
+        	writeDump(e); abort;
+        }
+        location("#application.baseEPath#/?staticPages/admin/&msg=#local.processMsg#",false);
     }
     
 	/*<!--- /////   _ADMIN MANAGE  ///// --->*/
@@ -163,6 +246,10 @@ component{
 		local.ary[1]={optValue='1',optText='Yes (page is currently active)'};
 		local.ary[2]={optValue='0',optText='No (page is NOT currently active)'};
 
+        //Regions form values
+		local.regionAry = arrayNew(1);
+		local.regionAry[1]={optValue='1',optText='Yes, include this region on this page'};
+
 		//Region heading
         local.regionHead = '';
                 
@@ -171,9 +258,26 @@ component{
 
     	if(local.id){
         	local.obj = entityLoadByPk("StaticPages",local.id);
+			for(i=1; i LTE arrayLen(local.obj.getRegions()); i++){
+				r = "Region#i#";
+				'#r#' = entityLoadByPk("PageRegion",local.obj.getRegions()[i].getId());
+			}
         }
         else{
-        	local.obj = entityNew("StaticPages");
+			local.layoutObj = entityLoadByPK("Layouts",1);
+			topBannerRegion = entityLoadByPK("PageRegionType",1);
+			leftColRegion = entityLoadByPK("PageRegionType",2);
+			rightColRegion = entityLoadByPK("PageRegionType",3);
+			defaultRegion = entityLoadByPK("PageRegionType",4);
+			bottomBannerRegion = entityLoadByPK("PageRegionType",5);
+        	Region1 = new com.PageRegion(isActive=true,regionText='This is the top area.',regionType=topBannerRegion,regionName="Top Banner");
+        	Region2 = new com.PageRegion(isActive=true,regionText='This is the left column.',regionType=leftColRegion,regionName="Left Column");
+        	Region3 = new com.PageRegion(isActive=true,regionText='This is the right column.',regionType=rightColRegion,regionName="Right Column");
+	        Region4 = new com.PageRegion(isActive=true,regionText='This is the default content region.',regionType=defaultRegion,regionName="Default Content Region");
+	        Region5 = new com.PageRegion(isActive=true,regionText='This is the bottom area.',regionType=bottomBannerRegion,regionName="Bottom Banner");
+        	local.obj = new com.StaticPages(pageName="",pageURL="",parentURL="index",linkText="",orderby=1,metaTitle="",isActive=true,pageLayout=local.layoutObj);
+        	local.obj.setRegions([Region1,Region2,Region3,Region4,Region5]);
+
             if(isDefined('local.rcF.metaTitle')){ //it came from form so reload form values
 		        local.obj.setMetaTitle(local.rcF.metaTitle);
 		        local.obj.setMetadesc(local.rcF.metadesc);
@@ -186,8 +290,9 @@ component{
 		        local.obj.setIsActive(local.rcF.isActive);
                 local.errMsg = 'Please check your information for errors and re-submit.';
             }
+        	entitySave(local.obj);
         }
-        
+
         //double check for an object
         if(isNull(local.obj)){
         	local.obj = entityNew("StaticPages");
