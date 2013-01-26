@@ -97,7 +97,7 @@
             
 			<cfcatch type="any">
             	<!--- for debugging if this is uncommented you may get bogus errors (specially on db rebuild). use with caution--->
-				<!---<cfdump var="#cfcatch#"><cfabort> --->
+				<cfdump var="#cfcatch#"><cfabort><!--- --->
 
 				<!--- during site creation this is helpful to have, can prly remove on production. wouldn't hurt to keep either. --->
 				<cfset variables.myPage='Error in page creation. Line 102 Application.cfc'>

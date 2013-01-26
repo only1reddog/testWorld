@@ -27,6 +27,12 @@
 				--->
             </li>
         </cfif>
+		<li>
+			<a href="#application.baseEPath#?department/admin">Departments</a>
+		</li>
+		<li>
+			<a href="#application.baseEPath#?employee/admin">Employees</a>
+		</li>
     	<li>
         	<a name="pageAnchor">Pages</a>
             <ul>

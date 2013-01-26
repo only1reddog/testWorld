@@ -3,12 +3,18 @@ component{
 		theFile = 'mainNav.js';
 		sourceFile = expandPath('/assets/js/#theFile#');
 		destinationFile = expandPath('/archives/#theFile#.#dateformat(now(),'yyyymmdd')##timeformat(now(),'hhmmss')#');
+		
+		savecontent variable = "navHTML"{
+	    	include "../views/menus/mainNav.cfm";
+		}
+		/* escape single quotes */
+		navHTML = replace(navHTML,"'","\'","all");
 	
 		/*write some funky js */
 	    savecontent variable="fileContent"{
 	    	writeOutput("var navHTML = ");
 	    	writeOutput("'");
-	    	include "../views/menus/mainNav.cfm";
+	    	writeOutput(navHTML);
 	    	writeOutput("';");
 			writeOutput(" document.write(navHTML);");
 	    }

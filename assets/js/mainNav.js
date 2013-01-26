@@ -1,1 +1,1 @@
-var navHTML = '<ul class="mainNav"><li><a href="/index">Home</a></li><li><a href="/region-example">Regions Ex:</a></li><li><a href="/bob">Bob</a></li><li><a href="/?login" class="last">Login</a></li></ul>'; document.write(navHTML);
+var navHTML = '<ul class="mainNav"><li><a href="/index">Home</a></li><li><a href="/region-example">Regions Ex:</a></li><li><a href="/department">Departments</a></li><li><a href="/employee">Employees</a></li><li><a href="/?login" class="last">Login</a></li></ul>'; document.write(navHTML);

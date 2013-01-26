@@ -102,18 +102,12 @@ component{
             /* Don't really delete an entity, mark is as isDeleted=1*/
             local.obj.setIsDeleted(true);
   
-			/*FILE INFO*/
-			theFile = '#local.obj.getPageURL()#.html';
-			sourceFile = expandPath('/#theFile#');
-			destinationFile = expandPath('/archives/#theFile#.#dateformat(now(),'yyyymmdd')##timeformat(now(),'hhmmss')#');
-			
-			/* BACKUP EXISTING */
-			if(fileExists(sourceFile)){
-				fileMove(sourceFile,destinationFile);
-			}
+	//TODO doesn't seem to remove from js
+			rcF = {};
+			rcU = {};
+			new controllers.createHTMLFile(local.obj,rcF,rcU);
 
-			/*CREATE MAIN NAV JS FILE*/
-			js = new controllers.createMainNav(local.obj);	
+	//TODO delete the html file too
 
   	        location("#application.baseEPath#/?staticPages/admin/&msg=#local.processMsg#",false);
         }
@@ -195,33 +189,9 @@ component{
         	return false;
         }
         
-        try{ /*if this is a front end page, create html file*/
-        //	if(lcase(local.rcF.parentURL) eq 'index'){
-				/* GET CONTROLLER */
-				/* this should work with sections. Just need to get controller somehow.
-				rcU = {};
-				request.rc = createObject('controllers.login').init(rcF,rcU)
-				*/
-				
-	        	/* CREATE THE PAGE*/
-	        	pageContent = createObject('com.Page').init('/layouts/#local.obj.getPageLayout().getLayoutName()#.cfm',local.obj);				
-					
-				/*FILE INFO*/
-				theFile = '#local.rcF.pageURL#.html';
-				sourceFile = expandPath('/#theFile#');
-				destinationFile = expandPath('/archives/#theFile#.#dateformat(now(),'yyyymmdd')##timeformat(now(),'hhmmss')#');
-			
-				/* BACKUP EXISTING */
-				if(fileExists(sourceFile)){
-					fileMove(sourceFile,destinationFile);
-				}
-
-				/*CREATE NEW HTML FILE*/
-				fileWrite(sourceFile,pageContent);        
-				
-				/*CREATE MAIN NAV JS FILE*/
-				js = new controllers.createMainNav(local.obj);	
-        //	}
+        try{ /* TODO should this only be if this is a front end page, create html file*/
+			rcU = {};
+			new controllers.createHTMLFile(local.obj,rcF,rcU);
         }catch(Any e){
         	writeDump(e); abort;
         }
