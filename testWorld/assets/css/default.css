@@ -1,0 +1,302 @@
+/* reset */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, code, em, img, small, strong, sub, sup, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+a{
+	color:#06F;
+	text-decoration:none;
+}
+a:hover{
+	color:#D68B2E;
+	text-decoration:none;
+}
+
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	font-weight: bold;
+}
+h1 {
+	color:#0066CC;
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.5em;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+.red{color:#ff0000;}
+
+
+input, select, textarea{
+	background-color:transparent;
+	color:#1d1d1d;
+}
+
+/* remember to define focus styles! */
+input:focus,textarea:focus,select:focus {
+	background-color:#CCF;
+	outline: 0;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* html 5 */
+header, nav, section, footer, aside, article, figure, address{display:block; overflow:hidden;}
+
+/* main */
+html{
+}
+body{
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+	background:#CCC;
+	color: #BCBCBC;
+}
+header, nav, #torso, footer{
+	background:#DDD;
+	clear:both;
+	margin:0 auto;
+	overflow:hidden;
+	padding:10px 15px;
+	width:920px;
+}
+
+form button{
+	background-color:#CCF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border:1px solid black;
+	cursor:pointer;
+	padding:1px 15px;
+}
+
+form button:hover{
+	background-color:#999;
+}
+
+header{
+	background:#999;
+	color:#000;
+	height:115%;
+}
+
+/* header logo etc. */
+#companyLogo{ /* header logo IMG in common layout */
+}
+h1#companyLogoAlt{ /* header logo alternate text if no IMG in common layout (Site Name) */
+	color:#fff;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:2.5em;
+}
+aside#companyTagline{ /* header tagline */
+	font-style:italic;
+}
+aside.leftCol{
+	float:left;
+	width:125px;
+}
+nav{
+	background:#f1f1f1;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.3em;
+	line-height:14px;
+	margin:15px 0 0;
+	padding:10px 0px 10px 0px;
+	text-align:left;
+	width:915px;
+}
+.mainNav{
+	width:100%;
+}
+.mainNav li{
+	display:inline-block;
+	float:left;
+	font-family:tahoma;
+	font-size:1.1em;
+	margin:0 2px;
+}
+.mainNav li a{
+	border-right:1px solid #0066CC;
+	color:#0066CC;
+	display:block;
+	padding:0 25px;
+}
+.mainNav li a.last{
+	border:none;
+}
+.mainNav li a.mainNavActive{
+	color:#D68B2E;
+	font-style:italic;
+	font-weight:bold;
+}
+.mainNav li a:hover{
+	color:#D68B2E;
+	text-decoration:none;
+}
+.mainNav li ul{
+	background:transparent;
+}
+.mainNav li:hover ul{
+	left:auto;
+}
+.mainNav li ul li{
+	width:100%;
+}
+.mainNav li ul li a{
+	padding:0px 10px;
+}
+.mainNav li ul li a:hover{
+	color:#D68B2E;
+}
+#torso{
+	padding-bottom:10px;
+	position:relative;
+}
+h1#pageTitle{ /* main content page header */
+	margin:0 0 18px 0;
+}
+/* REGIONS */
+div#regionType_1{ /* top banner region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	clear:both;
+	color:#333;
+	margin-bottom:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+}
+div#regionType_1 h2{ /* top banner region heading */
+	color:#333;
+}
+div#regionType_1 label{ /* top banner region labels */
+	display:block;
+	font-size:1.2em;
+	font-weight:800;
+	margin:15px 0 0 0;
+}
+div#regionType_2{ /* left col region */
+	background:#aaa;
+	border:1px solid #f1f1f1;
+	color:#333;
+	float:left;
+	font-size:1.15em;
+	margin-right:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+	width:150px;
+}
+div#regionType_2 h2{ /* left col region heading */
+	color:#FFF;
+	font-size:1.2em;
+}
+div#regionType_3{ /* right col region */
+	background:#aaa;
+	border:1px solid #f1f1f1;
+	color:#333;
+	float:right;
+	font-size:1.15em;
+	margin-left:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+	width:150px;
+}
+div#regionType_3 h2{ /* right col region heading */
+	color:#000;
+	font-size:1.2em;
+}
+div#regionType_4{ /* default region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	color:#333;
+	font-size:1.2em;
+	overflow:hidden;
+	padding:25px 10px 75px;
+	position:relative;
+}
+div#regionType_4 h2{ /* default region heading */
+	color:#666;
+}
+div#regionType_4 a{ /* default region heading */
+	color:#06F;
+}
+div#regionType_4 a:hover{ /* default region heading */
+	color:#000;
+}
+div#regionType_5{ /* bottom banner region */
+	background:#f1f1f1;
+	border:1px solid #ccc;
+	clear:both;
+	color:#333;
+	margin-top:10px;
+	overflow:hidden;
+	padding:25px 10px;
+	position:relative;
+}
+div#regionType_5 h2{ /* bottom banner region heading */
+	color:#333;
+}
+/* END REGIONS */
+
+/* LOGIN */
+aside#defaultLoginRegion{ /* login form container */
+	text-align:center;
+}
+aside#defaultLoginRegion #loginForm{ /* login form */
+	border:1px solid #999;
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	margin:30px auto;
+	padding:25px;
+	width:400px;
+}
+aside#defaultLoginRegion form label{ /* login form labels */
+	display:inline-block;
+	font-weight:bold;
+	margin: 10px;
+	text-align:left;
+	width:130px;
+}
+
+footer{
+	color:#000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:.95em;
+	font-weight:400;
+	text-align:center;
+}
+footer > div{
+	display:inline-block;
+	height:25px;
+	margin: 10px 10px;
+	min-width:300px;
+	padding:0 25px;
+	vertical-align:top;
+}

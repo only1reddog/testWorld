@@ -1,0 +1,1412 @@
+"Severity","ThreadID","Date","Time","Application","Message"
+"ERROR","web-0","01/09/2013","06:59:12","","datasource [testWorld] doesn't exist"
+"ERROR","web-0","01/09/2013","06:59:20","","datasource [testWorld] doesn't exist"
+"ERROR","web-0","01/09/2013","07:01:59","","datasource [testWorld] doesn't exist"
+"ERROR","web-0","01/11/2013","14:16:06","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/11/2013","14:16:48","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/11/2013","14:17:30","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago."
+"ERROR","web-0","01/11/2013","14:18:12","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/11/2013","14:18:54","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/11/2013","14:19:36","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/11/2013","14:20:20","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago."
+"ERROR","web-0","01/11/2013","14:21:02","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 2 ms ago."
+"ERROR","web-0","01/15/2013","10:58:37","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:58:39","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago."
+"ERROR","web-0","01/15/2013","10:58:45","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:58:47","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:58:50","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:58:52","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:58:54","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:02","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:04","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago."
+"ERROR","web-0","01/15/2013","10:59:06","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:09","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:11","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:13","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 1 ms ago."
+"ERROR","web-0","01/15/2013","10:59:16","","can't connect to datasource [testWorld]; Communications link failure due to underlying exception: 
+
+** BEGIN NESTED EXCEPTION ** 
+
+java.net.ConnectException
+MESSAGE: Connection refused
+
+STACKTRACE:
+
+java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:256)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:271)
+	at com.mysql.jdbc.Connection.createNewIO(Connection.java:2771)
+	at com.mysql.jdbc.Connection.<init>(Connection.java:1555)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:285)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at railo.commons.db.DBUtil.getConnection(DBUtil.java:87)
+	at railo.runtime.db.DatasourceConnectionPool.loadDatasourceConnection(DatasourceConnectionPool.java:70)
+	at railo.runtime.db.DatasourceConnectionPool.getDatasourceConnection(DatasourceConnectionPool.java:62)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.getSessionFactory(HibernateORMEngine.java:214)
+	at railo.runtime.orm.hibernate.HibernateORMEngine.init(HibernateORMEngine.java:117)
+	at railo.runtime.config.ConfigImpl.getORMEngine(ConfigImpl.java:3127)
+	at railo.runtime.config.ConfigImpl.resetORMEngine(ConfigImpl.java:3113)
+	at railo.runtime.orm.ORMUtil.resetEngine(ORMUtil.java:46)
+	at railo.runtime.listener.ModernAppListener.initApplicationContext(ModernAppListener.java:369)
+	at railo.runtime.listener.ModernAppListener._onRequest(ModernAppListener.java:90)
+	at railo.runtime.listener.MixedAppListener.onRequest(MixedAppListener.java:18)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2255)
+	at railo.runtime.PageContextImpl.execute(PageContextImpl.java:2222)
+	at railo.runtime.engine.CFMLEngineImpl.serviceCFML(CFMLEngineImpl.java:310)
+	at railo.loader.servlet.CFMLServlet.service(CFMLServlet.java:29)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1004)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+
+** END NESTED EXCEPTION **
+
+
+
+Last packet sent to the server was 0 ms ago."
